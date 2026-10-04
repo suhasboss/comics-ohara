@@ -1,0 +1,648 @@
+/* ================================
+   COMICS OHARA - MAIN STYLES
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #09090d;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(9, 9, 13, 0.95);
+    border-bottom: 1px solid #25252d;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ffc400;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaaab3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: #ffc400;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 7%;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            #3c3205 0%,
+            #171713 20%,
+            #09090d 58%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Comic-style background dots */
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: 5%;
+    top: 15%;
+
+    background-image: radial-gradient(
+        #ffc400 1.5px,
+        transparent 1.5px
+    );
+
+    background-size: 14px 14px;
+
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 780px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    color: #ffc400;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 8vw, 105px);
+
+    line-height: 0.92;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #ffc400;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    margin-top: 30px;
+
+    color: #a5a5ad;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.primary-button {
+    background: #ffc400;
+    color: #111;
+}
+
+.primary-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid #44444d;
+    color: white;
+}
+
+.secondary-button:hover {
+    border-color: #ffc400;
+    color: #ffc400;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+   ================================ */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: #ffc400;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin-top: 8px;
+}
+
+
+/* ================================
+   FEATURED COMIC
+   ================================ */
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+
+    background: #15151b;
+
+    border: 1px solid #292931;
+
+    overflow: hidden;
+}
+
+.comic-cover {
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            #fff176,
+            transparent 20%
+        ),
+        linear-gradient(
+            135deg,
+            #ffc400,
+            #e63946
+        );
+}
+
+.cover-text {
+    font-size: 55px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    color: #111;
+
+    text-shadow: 3px 3px 0 rgba(255,255,255,0.2);
+}
+
+.featured-info {
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.comic-label {
+    color: #ffc400;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.featured-info h2 {
+    font-size: 55px;
+    line-height: 1;
+
+    margin: 15px 0;
+}
+
+.featured-info > p:not(.comic-label) {
+    color: #999;
+
+    line-height: 1.8;
+
+    max-width: 560px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   COMIC LIBRARY
+   ================================ */
+
+.comics {
+    background: #0d0d12;
+}
+
+.comic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.comic-card {
+    background: #15151b;
+
+    border: 1px solid #292931;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.comic-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ffc400;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card-cover {
+    height: 360px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 50px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    color: white;
+}
+
+.cover-one {
+    background:
+        linear-gradient(
+            135deg,
+            #111,
+            #d62828
+        );
+}
+
+.cover-two {
+    background:
+        linear-gradient(
+            135deg,
+            #16102b,
+            #7338a0
+        );
+}
+
+.cover-three {
+    background:
+        linear-gradient(
+            135deg,
+            #062f3c,
+            #00a6c7
+        );
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info span {
+    color: #ffc400;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.card-info h3 {
+    font-size: 24px;
+
+    margin: 9px 0;
+}
+
+.card-info p {
+    color: #777;
+
+    margin-bottom: 18px;
+}
+
+.card-info button {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 800;
+
+    font-size: 14px;
+}
+
+.card-info button:hover {
+    color: #ffc400;
+}
+
+
+/* ================================
+   CHARACTERS
+   ================================ */
+
+.characters {
+    background: #111116;
+}
+
+.character-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.character {
+    text-align: center;
+}
+
+.character-image {
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #292929;
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+    color: #ffc400;
+
+    margin-bottom: 20px;
+}
+
+.character-image.villain {
+    background: #251327;
+    color: #d946ef;
+}
+
+.character-image.sidekick {
+    background: #0e2933;
+    color: #22d3ee;
+}
+
+.character h3 {
+    font-size: 22px;
+}
+
+.character p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* ================================
+   ABOUT
+   ================================ */
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 65px;
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+.about h2 span {
+    color: #ffc400;
+}
+
+.about > p:last-child {
+    color: #999;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 60px 7%;
+
+    background: #050507;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #777;
+}
+
+.copyright {
+    margin-top: 25px;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .comic-cover {
+        min-height: 400px;
+    }
+
+    .featured-info {
+        padding: 35px;
+    }
+
+    .featured-info h2 {
+        font-size: 38px;
+    }
+
+    .comic-grid,
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2 {
+        font-size: 45px;
+    }
+
+}
