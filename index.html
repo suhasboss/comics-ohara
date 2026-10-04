@@ -1,540 +1,410 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comics Ohara — Digital Comic Library</title>
 
-    <title>Comics Ohara — Digital Comic Library</title>
+<meta name="description" content="Comics Ohara — discover heroes, adventures, mysteries and unforgettable stories.">
 
-    <meta
-        name="description"
-        content="Comics Ohara — discover heroes, adventures, mysteries and unforgettable stories."
-    >
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+</head> <body>
+<header class="navbar">
 
-<body>
+    <a href="#home" class="logo">
+        COMICS <span>OHARA</span>
+    </a>
 
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#library">Library</a>
+        <a href="#featured">Featured</a>
+        <a href="#about">About</a>
+    </nav>
 
-    <header class="navbar">
+    <button class="search-btn" id="searchBtn" aria-label="Search">
+        🔍
+    </button>
 
-        <a href="#" class="logo">
-            COMICS <span>OHARA</span>
-        </a>
-
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#library">Library</a>
-            <a href="#featured">Featured</a>
-            <a href="#about">About</a>
-        </nav>
-
-        <button class="search-btn" id="searchBtn" aria-label="Search">
-            🔍
-        </button>
-
-    </header>
+</header>
 
 
-    <!-- =========================================
-         HERO
-    ========================================== -->
+<main>
 
-    <main>
+    <section class="hero" id="home">
 
-        <section class="hero" id="home">
+        <div class="hero-background"></div>
 
-            <div class="hero-background"></div>
+        <div class="speed-lines"></div>
 
-            <div class="speed-lines"></div>
+        <div class="hero-content">
 
-            <div class="hero-content">
+            <div class="eyebrow">
+                📚 THE DIGITAL COMIC LIBRARY
+            </div>
 
-                <div class="eyebrow">
-                    📚 THE DIGITAL COMIC LIBRARY
+            <h1>
+                EVERY STORY
+                <span>HAS A WORLD.</span>
+            </h1>
+
+            <p>
+                Discover heroes, adventures, mysteries and
+                unforgettable stories — one panel at a time.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#library" class="btn btn-primary">
+                    EXPLORE LIBRARY
+                    <span>→</span>
+                </a>
+
+                <a href="#featured" class="btn btn-secondary">
+                    FEATURED
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-badge">
+            <span>100+</span>
+            COMICS
+        </div>
+
+    </section>
+
+
+    <section class="section featured" id="featured">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    HANDPICKED
+                </span>
+
+                <h2>
+                    FEATURED COMICS
+                </h2>
+            </div>
+
+            <span class="section-number">
+                01
+            </span>
+
+        </div>
+
+
+        <div class="featured-card">
+
+            <div class="comic-cover featured-cover">
+
+                <div class="cover-burst">
+                    NEW
                 </div>
 
-                <h1>
-                    EVERY STORY
-                    <span>HAS A WORLD.</span>
-                </h1>
+                <div class="cover-title">
+                    BUTCH
+                    <strong>A HATE COMIC</strong>
+                </div>
+
+                <div class="cover-issue">
+                    FEBRUARY 2026
+                </div>
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <span class="comic-tag">
+                    FEATURED COMIC
+                </span>
+
+                <h3>
+                    Butch - A Hate Comic
+                </h3>
 
                 <p>
-                    Discover heroes, adventures, mysteries and
-                    unforgettable stories — one panel at a time.
+                    February 2026 Digital Edition.
+                    Step into the story and explore
+                    every page of this comic.
                 </p>
 
-                <div class="hero-buttons">
+                <div class="comic-meta">
 
-                    <a href="#library" class="btn btn-primary">
-                        EXPLORE LIBRARY
-                        <span>→</span>
-                    </a>
-
-                    <a href="#featured" class="btn btn-secondary">
-                        FEATURED
-                    </a>
+                    <span>📖 DIGITAL</span>
+                    <span>🆕 NEW</span>
+                    <span>📄 PDF</span>
 
                 </div>
 
+                <a
+                    class="read-button"
+                    href="https://simplest-train-7509.sharebob.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    READ NOW
+                    <span>→</span>
+                </a>
+
             </div>
 
-            <div class="hero-badge">
-                <span>100+</span>
-                COMICS
+        </div>
+
+    </section>
+
+
+    <section class="section library" id="library">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    COMIC LIBRARY
+                </h2>
+
             </div>
 
-        </section>
+            <span class="section-number">
+                02
+            </span>
+
+        </div>
 
 
-        <!-- =========================================
-             FEATURED
-        ========================================== -->
+        <div class="library-controls">
 
-        <section class="section featured" id="featured">
+            <div class="search-box">
 
-            <div class="section-heading">
+                <span>🔍</span>
 
-                <div>
-                    <span class="section-label">HANDPICKED</span>
-                    <h2>FEATURED COMICS</h2>
+                <input
+                    type="text"
+                    id="comicSearch"
+                    placeholder="Search comics..."
+                >
+
+            </div>
+
+
+            <select id="genreFilter">
+
+                <option value="all">
+                    All Genres
+                </option>
+
+                <option value="action">
+                    Action
+                </option>
+
+                <option value="adventure">
+                    Adventure
+                </option>
+
+                <option value="fantasy">
+                    Fantasy
+                </option>
+
+                <option value="mystery">
+                    Mystery
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="comic-grid" id="comicGrid">
+
+
+            <article
+                class="comic-card"
+                data-title="Butch - A Hate Comic"
+                data-genre="action"
+            >
+
+                <div class="card-cover cover-red">
+
+                    <span class="issue">
+                        FEB<br>
+                        2026
+                    </span>
+
+                    <div>
+                        BUTCH
+                        <strong>A HATE COMIC</strong>
+                    </div>
+
                 </div>
 
-                <span class="section-number">01</span>
 
-            </div>
+                <div class="card-content">
 
-
-            <div class="featured-card">
-
-                <div class="comic-cover featured-cover">
-
-                    <div class="cover-burst">
-                        NEW
-                    </div>
-
-                    <div class="cover-title">
-                        YOUR
-                        <strong>STORY</strong>
-                    </div>
-
-                    <div class="cover-issue">
-                        ISSUE #001
-                    </div>
-
-                </div>
-
-
-                <div class="featured-content">
-
-                    <span class="comic-tag">
-                        FEATURED COMIC
+                    <span class="card-category">
+                        DIGITAL
                     </span>
 
                     <h3>
-                        The Story Begins
+                        Butch - A Hate Comic
                     </h3>
 
                     <p>
-                        Every legend starts somewhere.
-                        Step into a world of adventure,
-                        mystery and unforgettable characters.
+                        February 2026 · PDF
                     </p>
 
-                    <div class="comic-meta">
+                    <a
+                        href="https://simplest-train-7509.sharebob.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        READ →
+                    </a>
 
-                        <span>⚔ ACTION</span>
-                        <span>🌎 ADVENTURE</span>
-                        <span>📖 ISSUE #001</span>
+                </div>
 
+            </article>
+
+
+            <article
+                class="comic-card"
+                data-title="Coming Soon"
+                data-genre="fantasy"
+            >
+
+                <div class="card-cover cover-purple">
+
+                    <span class="issue">
+                        SOON
+                    </span>
+
+                    <div>
+                        MORE
+                        <strong>STORIES</strong>
                     </div>
 
-                    <button
-                        class="read-button"
-                        onclick="openReader()"
-                    >
-                        READ NOW
-                        <span>→</span>
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="card-category">
+                        COMING SOON
+                    </span>
+
+                    <h3>
+                        More Comics
+                    </h3>
+
+                    <p>
+                        New adventures are coming.
+                    </p>
+
+                    <button disabled>
+                        SOON
                     </button>
 
                 </div>
 
-            </div>
+            </article>
 
-        </section>
 
-
-        <!-- =========================================
-             LIBRARY
-        ========================================== -->
-
-        <section class="section library" id="library">
-
-            <div class="section-heading">
-
-                <div>
-                    <span class="section-label">EXPLORE</span>
-                    <h2>COMIC LIBRARY</h2>
-                </div>
-
-                <span class="section-number">02</span>
-
-            </div>
-
-
-            <!-- SEARCH -->
-
-            <div class="library-controls">
-
-                <div class="search-box">
-
-                    <span>🔍</span>
-
-                    <input
-                        type="text"
-                        id="comicSearch"
-                        placeholder="Search comics..."
-                    >
-
-                </div>
-
-
-                <select id="genreFilter">
-
-                    <option value="all">
-                        All Genres
-                    </option>
-
-                    <option value="action">
-                        Action
-                    </option>
-
-                    <option value="adventure">
-                        Adventure
-                    </option>
-
-                    <option value="fantasy">
-                        Fantasy
-                    </option>
-
-                    <option value="mystery">
-                        Mystery
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- COMIC GRID -->
-
-            <div class="comic-grid" id="comicGrid">
-
-
-                <!-- COMIC 1 -->
-
-                <article
-                    class="comic-card"
-                    data-title="The Last Guardian"
-                    data-genre="action"
-                >
-
-                    <div class="card-cover cover-red">
-
-                        <span class="issue">
-                            ISSUE<br>
-                            001
-                        </span>
-
-                        <div>
-                            THE
-                            <strong>LAST</strong>
-                            GUARDIAN
-                        </div>
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-category">
-                            ACTION
-                        </span>
-
-                        <h3>
-                            The Last Guardian
-                        </h3>
-
-                        <p>
-                            Issue #001
-                        </p>
-
-                        <button onclick="openReader()">
-                            READ →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- COMIC 2 -->
-
-                <article
-                    class="comic-card"
-                    data-title="Shadow Realm"
-                    data-genre="fantasy"
-                >
-
-                    <div class="card-cover cover-purple">
-
-                        <span class="issue">
-                            ISSUE<br>
-                            002
-                        </span>
-
-                        <div>
-                            SHADOW
-                            <strong>REALM</strong>
-                        </div>
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-category">
-                            FANTASY
-                        </span>
-
-                        <h3>
-                            Shadow Realm
-                        </h3>
-
-                        <p>
-                            Issue #002
-                        </p>
-
-                        <button onclick="openReader()">
-                            READ →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- COMIC 3 -->
-
-                <article
-                    class="comic-card"
-                    data-title="Beyond The Sea"
-                    data-genre="adventure"
-                >
-
-                    <div class="card-cover cover-blue">
-
-                        <span class="issue">
-                            ISSUE<br>
-                            003
-                        </span>
-
-                        <div>
-                            BEYOND
-                            <strong>THE SEA</strong>
-                        </div>
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-category">
-                            ADVENTURE
-                        </span>
-
-                        <h3>
-                            Beyond The Sea
-                        </h3>
-
-                        <p>
-                            Issue #003
-                        </p>
-
-                        <button onclick="openReader()">
-                            READ →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- COMIC 4 -->
-
-                <article
-                    class="comic-card"
-                    data-title="Dark Horizon"
-                    data-genre="mystery"
-                >
-
-                    <div class="card-cover cover-black">
-
-                        <span class="issue">
-                            ISSUE<br>
-                            004
-                        </span>
-
-                        <div>
-                            DARK
-                            <strong>HORIZON</strong>
-                        </div>
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-category">
-                            MYSTERY
-                        </span>
-
-                        <h3>
-                            Dark Horizon
-                        </h3>
-
-                        <p>
-                            Issue #004
-                        </p>
-
-                        <button onclick="openReader()">
-                            READ →
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             WHY COMICS OHARA
-        ========================================== -->
-
-        <section class="section about" id="about">
-
-            <div class="about-content">
-
-                <span class="section-label">
-                    THE WORLD OF STORIES
-                </span>
-
-                <h2>
-                    ONE LIBRARY.
-                    <span>ENDLESS WORLDS.</span>
-                </h2>
-
-                <p>
-                    Comics Ohara is built for people who love
-                    stories, characters and worlds that stay
-                    with you long after the final page.
-                </p>
-
-            </div>
-
-
-            <div class="stats">
-
-                <div class="stat">
-                    <strong>100+</strong>
-                    <span>COMICS</span>
-                </div>
-
-                <div class="stat">
-                    <strong>∞</strong>
-                    <span>ADVENTURES</span>
-                </div>
-
-                <div class="stat">
-                    <strong>01</strong>
-                    <span>LIBRARY</span>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer>
-
-        <div class="footer-logo">
-            COMICS <span>OHARA</span>
         </div>
 
-        <p>
-            Every story has a world. 🌎
-        </p>
+    </section>
 
-        <div class="footer-bottom">
-            © 2026 Comics Ohara
+
+    <section class="section about" id="about">
+
+        <div class="about-content">
+
+            <span class="section-label">
+                THE WORLD OF STORIES
+            </span>
+
+            <h2>
+                ONE LIBRARY.
+                <span>ENDLESS WORLDS.</span>
+            </h2>
+
+            <p>
+                Comics Ohara is built for people who love
+                stories, characters and worlds that stay
+                with you long after the final page.
+            </p>
+
         </div>
 
-    </footer>
 
+        <div class="stats">
 
-    <!-- =========================================
-         READER OVERLAY
-    ========================================== -->
+            <div class="stat">
 
-    <div
-        class="reader-overlay"
-        id="readerOverlay"
-    >
-
-        <div class="reader-box">
-
-            <button
-                class="close-reader"
-                onclick="closeReader()"
-            >
-                ✕
-            </button>
-
-            <div class="reader-placeholder">
-
-                <div class="reader-icon">
-                    📖
-                </div>
-
-                <h2>
-                    COMIC READER
-                </h2>
-
-                <p>
-                    Your CBZ reader will be connected here.
-                </p>
+                <strong>
+                    100+
+                </strong>
 
                 <span>
-                    COMING SOON
+                    COMICS
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    ∞
+                </strong>
+
+                <span>
+                    ADVENTURES
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    LIBRARY
                 </span>
 
             </div>
 
         </div>
 
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        COMICS <span>OHARA</span>
     </div>
 
+    <p>
+        Every story has a world. 🌎
+    </p>
 
-    <script src="script.js"></script>
+    <div class="footer-bottom">
+        © 2026 Comics Ohara
+    </div>
 
-</body>
-</html>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body> </html>
