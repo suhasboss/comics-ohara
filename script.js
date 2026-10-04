@@ -1,40 +1,198 @@
 // ============================================
 // COMICS OHARA
-// Main JavaScript
+// Website interactions
 // ============================================
 
 
 // --------------------------------------------
-// READ BUTTON
+// READER
 // --------------------------------------------
 
-function startReading() {
-    alert("The comic reader will be available soon!");
+function openReader() {
+    const overlay = document.getElementById("readerOverlay");
+
+    if (overlay) {
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
 }
 
 
+function closeReader() {
+    const overlay = document.getElementById("readerOverlay");
+
+    if (overlay) {
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+
+// Close reader when clicking outside the reader box
+
+const readerOverlay = document.getElementById("readerOverlay");
+
+if (readerOverlay) {
+
+    readerOverlay.addEventListener("click", function (event) {
+
+        if (event.target === readerOverlay) {
+            closeReader();
+        }
+
+    });
+
+}
+
+
+// Close reader with Escape key
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+        closeReader();
+    }
+
+});
+
+
 // --------------------------------------------
-// SEARCH BUTTON
+// SEARCH
 // --------------------------------------------
 
-const searchButton = document.querySelector(".search-button");
+const searchInput = document.getElementById("comicSearch");
+const comicCards = document.querySelectorAll(".comic-card");
 
-if (searchButton) {
 
-    searchButton.addEventListener("click", function () {
+function filterComics() {
 
-        const search = prompt(
-            "🔎 What comic are you looking for?"
-        );
+    const searchText =
+        searchInput.value
+            .toLowerCase()
+            .trim();
 
-        if (search) {
+    const selectedGenre =
+        document
+            .getElementById("genreFilter")
+            .value;
 
-            alert(
-                `Searching Comics Ohara for "${search}"...`
-            );
+    comicCards.forEach(function (card) {
+
+        const title =
+            card
+                .dataset
+                .title
+                .toLowerCase();
+
+        const genre =
+            card
+                .dataset
+                .genre
+                .toLowerCase();
+
+        const matchesSearch =
+            title.includes(searchText);
+
+        const matchesGenre =
+            selectedGenre === "all" ||
+            genre === selectedGenre;
+
+        if (matchesSearch && matchesGenre) {
+
+            card.style.display = "";
+
+        } else {
+
+            card.style.display = "none";
 
         }
 
     });
 
 }
+
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        filterComics
+    );
+
+}
+
+
+// --------------------------------------------
+// GENRE FILTER
+// --------------------------------------------
+
+const genreFilter =
+    document.getElementById("genreFilter");
+
+if (genreFilter) {
+
+    genreFilter.addEventListener(
+        "change",
+        filterComics
+    );
+
+}
+
+
+// --------------------------------------------
+// NAVIGATION SEARCH BUTTON
+// --------------------------------------------
+
+const searchButton =
+    document.getElementById("searchBtn");
+
+if (searchButton) {
+
+    searchButton.addEventListener(
+        "click",
+        function () {
+
+            const library =
+                document.getElementById("library");
+
+            if (library) {
+
+                library.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+            setTimeout(function () {
+
+                if (searchInput) {
+                    searchInput.focus();
+                }
+
+            }, 500);
+
+        }
+    );
+
+}
+
+
+// --------------------------------------------
+// CARD ENTRANCE ANIMATION
+// --------------------------------------------
+
+comicCards.forEach(function (card, index) {
+
+    card.style.animationDelay =
+        `${index * 0.08}s`;
+
+});
+
+
+// --------------------------------------------
+// CONSOLE MESSAGE
+// --------------------------------------------
+
+console.log(
+    "⚡ Comics Ohara loaded successfully!"
+);
